@@ -2377,7 +2377,7 @@ class InfoExtractor(object):
          1. [MS-SSTR]: Smooth Streaming Protocol,
             https://msdn.microsoft.com/en-us/library/ff469518.aspx
         """
-        if ism_doc.get('IsLive') == 'TRUE' or ism_doc.find('Protection') is not None:
+        if ism_doc.get('IsLive') == 'TRUE':
             return []
 
         duration = int(ism_doc.attrib['Duration'])
